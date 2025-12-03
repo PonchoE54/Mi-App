@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Tareas Eliminadas</h1>
+  <ul>
+    {{#each this.model as |task|}}
+      <li>{{task.name}}</li>
+    {{/each}}
+  </ul>
+  {{#link-to "application"}}<button class="nav-button">Volver</button>{{/link-to}}
+</div>
+

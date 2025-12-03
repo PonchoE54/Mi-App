@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Mi Lista de Tareas</h1>
+
+  <input
+    type="text"
+    placeholder="Escribe una tarea"
+    value={{this.newTask}}
+    {{on "input" this.updateNewTask}}
+  >
+  <button {{on "click" this.addTask}}>Agregar</button>
+
+  <ul>
+    {{#each this.tasks as |task index|}}
+      <li class={{if task.completed "completed"}}>
+        {{task.name}}
+        <div class="task-buttons">
+          <button {{on "click" (fn this.completeTask index)}}>✅</button>
+          <button {{on "click" (fn this.deleteTask index)}}>❌</button>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+
+  <!-- Botones para navegar a otras páginas -->
+  <div style="margin-top: 20px;">
+    <button {{on "click" (fn this.goToRoute "completed")}}>Tareas Completadas</button>
+    <button {{on "click" (fn this.goToRoute "deleted")}}>Tareas Eliminadas</button>
+  </div>
+</div>
