@@ -1,12 +1,6 @@
-import { pageTitle } from 'ember-page-title';
-import { WelcomePage } from 'ember-welcome-page';
+import HolaMundo from "../components/hola-mundo.gjs";
+
 
 <template>
-  {{pageTitle "MiApp"}}
-
-  {{outlet}}
-
-  {{! The following component displays Ember's default welcome message. }}
-  <WelcomePage />
-  {{! Feel free to remove this! }}
+  <HolaMundo @mensaje="Hola Mundo" />
 </template>
