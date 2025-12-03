@@ -1,6 +1,6 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, rgb(106 17 203 / 100%), rgb(37 117 252 / 100%));
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -10,10 +10,10 @@ body {
 }
 
 .container {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(255 255 255 / 95%);
   padding: 30px 40px;
   border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 20%);
   width: 400px;
   text-align: center;
 }
@@ -22,7 +22,7 @@ h1 {
   color: #333;
   font-size: 30px;
   margin-bottom: 25px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgb(0 0 0 / 20%);
 }
 
 input[type="text"] {
@@ -63,7 +63,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
 }
 
 .task-buttons button {
@@ -76,6 +76,7 @@ li {
 }
 
 .nav-button {
+  display: inline-block;
   padding: 10px 15px;
   margin-right: 10px;
   background-color: #4CAF50;
@@ -83,9 +84,11 @@ li {
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s;
 }
 
 .nav-button:hover {
   background-color: #45a049;
 }
-
